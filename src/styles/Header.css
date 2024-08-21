@@ -47,9 +47,6 @@
     text-decoration: underline;
 }
 
-
-
-/* * Media Query para telas menores */
 @media (max-width: 840px) {
     .navigation {
         gap: 80px; 
