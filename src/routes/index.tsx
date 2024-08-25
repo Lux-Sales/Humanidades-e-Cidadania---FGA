@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/index";
 import About from "../pages/Home/"; //adicionar pagina sobre
 import Classes from "../pages/Home/"; //adicionar pagina turmas
-import Contact from "../pages/Home/"; //adicionar pagina contatos
+import Contact from "../pages/Home/contact"; //adicionar pagina contatos
 
 function RoutesComponent(): JSX.Element {
   return (

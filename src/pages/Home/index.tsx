@@ -1,12 +1,13 @@
 import React from "react";
 import classes from "../../Projects/index";
 import Header from "../../components/Header";
+import ProjectCard from "../../components/ProjectCard"
 const Home = (): JSX.Element => {
 
   return (
   <div>
       <Header></Header>
-      <div>Happy hacking!</div>
+      <ProjectCard></ProjectCard>
   </div>);
 };
 
