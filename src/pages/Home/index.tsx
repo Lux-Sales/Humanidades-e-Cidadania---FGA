@@ -1,12 +1,13 @@
 import React from "react";
-import classes from "../../Projects/index";
-import ProjectCard from "../../components/ProjectCard";
+import ProjectCards from "../../components/ProjectCards/ProjectCards";
+import ProjectsPresentation from "../../components/ProjectsPresentation/ProjectsPresentation";
 
 const Home = (): JSX.Element => {
   return (
     <div>
-      <ProjectCard></ProjectCard>
-      Happy hacking!
+      <ProjectsPresentation>
+        <ProjectCards />
+      </ProjectsPresentation>
     </div>
   );
 };
