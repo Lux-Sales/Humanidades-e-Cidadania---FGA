@@ -1,0 +1,41 @@
+:root{
+    --color_card: #fefefe;
+    --box_shadow_card:0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about_page{
+    padding: 3rem;
+}
+
+.container_about_page{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    background: var(--color_card);
+    box-shadow: var(--box_shadow_card);
+
+}
+
+.about_teacher,.about_discipline{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.textual_info_teacher, .textual_info_discipline{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+} 
+.titles_about{
+    font-size:30px;
+}
+.subtitles_about{
+    color: rgb(90, 90, 90);
+}
+.img_about_page{
+    object-fit:cover;
+}

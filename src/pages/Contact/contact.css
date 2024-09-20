@@ -1,0 +1,19 @@
+
+:root {
+    --color-primary: #007bff;
+    --color-dark: #333;
+    --color-dark-secondary: #444;
+    --color-light: #666;
+    --color-light-secondary: #999;
+    --font-primary: Arial, Helvetica, sans-serif ;
+}
+.container_contact_page{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.section-contacts{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;;
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/index";
-import About from "../pages/Home/"; //adicionar pagina sobre
-import Classes from "../pages/Home/"; //adicionar pagina turmas
-import Contact from "../pages/Home/contact"; //adicionar pagina contatos
+import About from "../pages/About/index"; 
+import Classes from "../pages/Classes/index";
+import Contact from "../pages/Contact/index";
 
 function RoutesComponent(): JSX.Element {
   return (

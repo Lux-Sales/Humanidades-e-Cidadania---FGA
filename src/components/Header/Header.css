@@ -2,7 +2,14 @@
     --color_bg_header: #0eb469; 
     --color_text_header: #005730;
     --font_header: Arial, Helvetica, sans-serif;
-    --font_header_active:#fff;
+    --font_header_active: #fff;
+    --bg_texture: url('../img/granulado.png'); /* Adicione sua imagem de fundo granulado */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Cor de fundo da página */
 }
 
 .header {
@@ -11,7 +18,12 @@
     justify-content: space-between;
     padding: 16px 48px;
     background-color: var(--color_bg_header);
+    background-image: var(--bg_texture);
+    background-size: cover; /* Ajusta o tamanho da imagem */
+    background-attachment: fixed; /* Efeito de parallax */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
     flex-wrap: wrap; 
+    border-bottom: 1px solid black;
 }
 
 .logo img {
@@ -24,16 +36,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 128px;
+    gap: 64px;
     margin: 0;
 }
 
 .navigation li {
     margin: 0;
-    font-size: 22px;
+    font-size: 16px;
     font-family: var(--font_header);
     font-weight: bold;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease, color 0.25s ease; 
 }
 
 .navigation li:hover {
@@ -44,6 +56,7 @@
     color: var(--color_text_header);
     text-decoration: none;
     transition: color 0.25s ease;
+    position: relative; /* Para o efeito de sublinhado */
 }
 
 .nav-link.active {
@@ -54,12 +67,20 @@
     color: var(--font_header_active);
 }
 
-/* ajustes para tamanhos de tela menores */
-@media (max-width: 840px) {
-    .navigation {
-        gap: 80px; 
-    }
+.nav-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: var(--font_header_active);
+    transition: width 0.4s ease;
 }
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
 
 @media (max-width: 768px) {
     .navigation {
@@ -77,9 +98,6 @@
     .navigation {
         gap: 32px; 
     }
-    .navigation li {
-        font-size: 18px;
-    }
 }
 
 @media (max-width: 470px) {
@@ -95,22 +113,10 @@
         align-items: center;
         justify-content: center;
     }
-    .navigation li {
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 360px) {
     .header {
         padding: 8px 16px;
-    }
-    
-    .navigation {
-        gap: 8px; 
-        flex-wrap: wrap;
-    }
-    
-    .navigation li {
-        font-size: 16px;
     }
 }
